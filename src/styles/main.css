@@ -1,0 +1,63 @@
+@import url(reset.css);
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.menu {
+  align-items: center;
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  height: 90px;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.menu-time,
+.menu-score {
+  text-align: center;
+}
+
+.menu-time h2:nth-child(2),
+.menu-score h2:nth-child(2) {
+  margin-top: 10px;
+}
+
+.menu-lives {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.menu-lives img {
+  height: 50px;
+  width: 50px;
+}
+
+.menu-lives h2 {
+  margin: 10px;
+}
+
+.panel {
+  align-items: center;
+  border: px solid #ff0000;
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  background-image: url("../images/wall2.png");
+  background-repeat: round;
+}
+
+.square {
+  height: 150px;
+  width: 150px;
+}
+
+.enemy {
+  background-color: transparent;
+  background-image: url("../images/enemy.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
