@@ -1,15 +1,8 @@
-function myFunction(p1, p2) {
-    return p1 * p2;
-  }
-  
-  let result = myFunction(4, 3);
-  document.getElementById("demo").innerHTML = result;
-  
-  const state = {
+const state = {
     view: {
       squares: document.querySelectorAll(".square"),
       enemy: document.querySelector(".enemy"),
-      timeLef: document.querySelector("#time-left"),
+      timeLeft: document.querySelector("#time-left"),
       score: document.querySelector("#score"),
     },
     values: {
@@ -25,7 +18,7 @@ function myFunction(p1, p2) {
       square.classList.remove("enemy");
     });
   
-    let randomNumber = Math.floor(Math.random() * 9);
+    let randomNumber = Math.floor(Math.random() * state.view.squares.length);
     let randomSquare = state.view.squares[randomNumber];
     randomSquare.classList.add("enemy");
     state.values.hitPosition = randomSquare.id;
