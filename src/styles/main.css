@@ -1,5 +1,11 @@
 @import url(reset.css);
 
+:root {
+  --lines: #D2B48C;
+  --brick1: #8B6F4E;
+  --brick2: #A89F91;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -42,13 +48,19 @@
 
 .panel {
   align-items: center;
-  border: px solid #ff0000;
+  border: 1px solid #ff0000;
   display: flex;
   justify-content: center;
   margin: 1rem;
-  background-image: url("../images/wall2.png");
-  background-repeat: round;
-}
+  background:
+  repeating-conic-gradient(from 90deg at 95% 55%, var(--lines) 0% 25%, #fff0 0% 100%) var(--gp-cn), 
+  repeating-linear-gradient(180deg, var(--lines) 0 5%, #fff0 0 50%, var(--lines) 0 55%, var(--brick2) 0 100%) var(--gp-ln), 
+  repeating-linear-gradient(90deg, var(--brick1) 0 47.5%, var(--lines) 0 50%, var(--brick1) 0 97.5%, var(--lines) 0 100%) var(--gp-ln);
+  --units: 1.5vmax;
+  height: 100vh;
+  --gp-ln: 50%/calc(var(--units) * 10) calc(var(--units) * 5);
+  --gp-cn: 50%/calc(var(--units) * 5) calc(var(--units) * 5);
+  }
 
 .square {
   height: 150px;
